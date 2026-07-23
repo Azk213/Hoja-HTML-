@@ -1,0 +1,14 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+}
+.container{
+    display: flex;
+    justify-content: end;
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    gap:10px;
+
+}

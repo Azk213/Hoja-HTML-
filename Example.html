@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A single-file reference demonstrating every major HTML tag, ordered from beginner to advanced.">
+<title>All HTML Tags — Beginner to Advanced Reference</title>
+<base href="https://example.com/">
+<link rel="icon" href="data:,">
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1e222b; --text:#e7e9ee;
+    --muted:#9aa4b2; --accent:#7dd3fc; --accent2:#c4b5fd; --line:#2a2f3a;
+    --good:#86efac; --warn:#fca5a5;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height:1.55; margin:0; padding:2rem;
+  }
+  h1,h2,h3{font-family: Georgia, 'Times New Roman', serif; letter-spacing:.02em;}
+  h1{font-size:2.1rem; border-bottom:2px solid var(--accent); padding-bottom:.5rem;}
+  h2{color:var(--accent); margin-top:3rem; font-size:1.5rem;}
+  h3{color:var(--accent2); font-size:1.1rem; margin-top:1.5rem;}
+  section{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:1.5rem 1.8rem; margin-bottom:2rem;}
+  code, pre, kbd, samp, var{font-family: "SF Mono", Menlo, Consolas, monospace;}
+  code{background:var(--panel2); padding:.1rem .4rem; border-radius:4px; color:var(--accent);}
+  pre{background:var(--panel2); padding:1rem; border-radius:8px; overflow:auto; border:1px solid var(--line);}
+  table{border-collapse:collapse; width:100%; margin:1rem 0;}
+  caption{caption-side:top; font-style:italic; color:var(--muted); margin-bottom:.5rem;}
+  th,td{border:1px solid var(--line); padding:.5rem .7rem; text-align:left;}
+  thead th{background:var(--panel2);}
+  tfoot td{color:var(--muted); font-size:.9rem;}
+  fieldset{border:1px solid var(--line); border-radius:8px; padding:1rem; margin:1rem 0;}
+  legend{padding:0 .5rem; color:var(--accent);}
+  label{display:block; margin:.6rem 0 .2rem;}
+  input, select, textarea, button, output, meter, progress{
+    font:inherit; background:var(--panel2); color:var(--text);
+    border:1px solid var(--line); border-radius:6px; padding:.4rem .6rem;
+  }
+  button{background:var(--accent); color:#111; border:none; cursor:pointer; font-weight:600;}
+  button:hover{opacity:.85;}
+  mark{background:var(--accent2); color:#111;}
+  details{background:var(--panel2); border:1px solid var(--line); border-radius:8px; padding:.7rem 1rem; margin:.7rem 0;}
+  summary{cursor:pointer; font-weight:600; color:var(--accent);}
+  dialog{background:var(--panel2); color:var(--text); border:1px solid var(--accent); border-radius:10px; padding:1.5rem;}
+  figure{margin:1rem 0; text-align:center;}
+  figcaption{color:var(--muted); font-size:.9rem; margin-top:.4rem;}
+  blockquote{border-left:4px solid var(--accent); margin:1rem 0; padding:.3rem 1rem; color:var(--muted);}
+  .tag-badge{display:inline-block; font-size:.75rem; background:var(--panel2); color:var(--muted); border:1px solid var(--line); border-radius:20px; padding:.1rem .6rem; margin-left:.5rem;}
+  nav ul{list-style:none; display:flex; gap:1rem; padding:0; flex-wrap:wrap;}
+  nav a{color:var(--accent); text-decoration:none;}
+  nav a:hover{text-decoration:underline;}
+  address{font-style:normal; color:var(--muted);}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem;}
+  canvas{background:var(--panel2); border-radius:8px; border:1px solid var(--line);}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>All HTML Tags — Beginner → Intermediate → Advanced</h1>
+  <p>A single-page, self-contained reference. Each section demonstrates a group of tags with live, working examples.</p>
+  <nav aria-label="Table of contents">
+    <ul>
+      <li><a href="#beginner">Beginner</a></li>
+      <li><a href="#intermediate">Intermediate</a></li>
+      <li><a href="#advanced">Advanced</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============================================================ -->
+<h2 id="beginner">🟢 Beginner Tags</h2>
+
+<section id="text-basics">
+  <h3>Headings, paragraphs & text formatting</h3>
+  <p>This is a paragraph (<code>&lt;p&gt;</code>) containing <strong>strong importance</strong>, <em>emphasis</em>, <b>bold</b>, <i>italic</i>, <u>underline</u>, <small>small text</small>, <s>strikethrough</s>, <mark>highlighted text</mark>, <sub>subscript</sub> and <sup>superscript</sup>.</p>
+  <hr>
+  <blockquote cite="https://example.com/quote">
+    A blockquote for longer quoted passages.
+    <br>
+    <cite>— Some Author</cite>
+  </blockquote>
+  <p>Inline quote: <q cite="https://example.com">a short inline quotation</q>.</p>
+  <p><abbr title="HyperText Markup Language">HTML</abbr> and <dfn title="a term being defined">definition term</dfn> example.</p>
+  <p>Line break example: First line<br>Second line after a <code>&lt;br&gt;</code>.</p>
+  <p>Preformatted text:</p>
+  <pre>function hello() {
+  console.log("preformatted, spacing preserved");
+}</pre>
+</section>
+
+<section id="lists">
+  <h3>Lists</h3>
+  <div class="grid">
+    <div>
+      <p>Unordered list:</p>
+      <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </ul>
+    </div>
+    <div>
+      <p>Ordered list:</p>
+      <ol>
+        <li>Step one</li>
+        <li>Step two</li>
+        <li>Step three</li>
+      </ol>
+    </div>
+    <div>
+      <p>Description list:</p>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Markup language for structuring web content.</dd>
+        <dt>CSS</dt>
+        <dd>Language for styling that content.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="links-images">
+  <h3>Links & images</h3>
+  <p><a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer">A hyperlink to MDN</a></p>
+  <figure>
+    <img src="https://placehold.co/300x150/1e222b/7dd3fc?text=Sample+Image" alt="Placeholder sample image" width="300" height="150">
+    <figcaption>An <code>&lt;img&gt;</code> inside a <code>&lt;figure&gt;</code> with a <code>&lt;figcaption&gt;</code>.</figcaption>
+  </figure>
+</section>
+
+<section id="basic-div-span">
+  <h3>Generic containers</h3>
+  <div>A block-level <code>&lt;div&gt;</code> container. It contains a <span style="color:var(--accent)">span</span> for inline styling.</div>
+</section>
+
+<!-- ============================================================ -->
+<h2 id="intermediate">🟡 Intermediate Tags</h2>
+
+<section id="semantic-structure">
+  <h3>Semantic page structure</h3>
+  <article>
+    <header><strong>Article header</strong> — metadata for this article</header>
+    <section>
+      <h3>A section inside an article</h3>
+      <p>Sections group related content thematically.</p>
+    </section>
+    <aside>Aside: a tangential note related to the article.</aside>
+    <footer>Article footer — e.g. author info.</footer>
+  </article>
+  <address>Contact: <a href="mailto:info@example.com">info@example.com</a></address>
+</section>
+
+<section id="tables">
+  <h3>Tables</h3>
+  <table>
+    <caption>Quarterly results</caption>
+    <colgroup>
+      <col style="background:var(--panel2)">
+      <col span="2">
+    </colgroup>
+    <thead>
+      <tr><th>Quarter</th><th>Revenue</th><th>Growth</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Q1</td><td>$120k</td><td>+5%</td></tr>
+      <tr><td>Q2</td><td>$140k</td><td>+16%</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td>Total</td><td>$260k</td><td>—</td></tr>
+    </tfoot>
+  </table>
+</section>
+
+<section id="forms-basic">
+  <h3>Forms</h3>
+  <form onsubmit="event.preventDefault(); document.getElementById('formOut').value='Submitted: ' + new FormData(this).get('username');">
+    <fieldset>
+      <legend>User details</legend>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter name" required>
+
+      <label for="pw">Password</label>
+      <input type="password" id="pw" name="pw">
+
+      <label for="opts">Favorite language</label>
+      <select id="opts" name="opts">
+        <optgroup label="Frontend">
+          <option value="js">JavaScript</option>
+          <option value="ts">TypeScript</option>
+        </optgroup>
+        <optgroup label="Backend">
+          <option value="py">Python</option>
+        </optgroup>
+      </select>
+
+      <label for="color">Pick from list</label>
+      <input list="colorList" id="color" name="color">
+      <datalist id="colorList">
+        <option value="Red"></option>
+        <option value="Green"></option>
+        <option value="Blue"></option>
+      </datalist>
+
+      <label for="msg">Message</label>
+      <textarea id="msg" name="msg" rows="3" placeholder="Type here..."></textarea>
+
+      <label><input type="checkbox" name="subscribe"> Subscribe to newsletter</label>
+      <label><input type="radio" name="plan" value="free"> Free plan</label>
+      <label><input type="radio" name="plan" value="pro"> Pro plan</label>
+
+      <button type="submit">Submit</button>
+      <output id="formOut" name="formOut"></output>
+    </fieldset>
+  </form>
+</section>
+
+<section id="media-inline">
+  <h3>Progress, meter & interactive disclosure</h3>
+  <label for="prog">Download progress</label>
+  <progress id="prog" value="70" max="100"></progress>
+  <label for="mtr">Disk usage</label>
+  <meter id="mtr" value="0.6" min="0" max="1">60%</meter>
+
+  <details>
+    <summary>Click to expand more info</summary>
+    <p>Hidden content revealed via the native <code>&lt;details&gt;</code>/<code>&lt;summary&gt;</code> disclosure widget.</p>
+  </details>
+</section>
+
+<!-- ============================================================ -->
+<h2 id="advanced">🔴 Advanced Tags</h2>
+
+<section id="multimedia">
+  <h3>Audio, video & embedded content</h3>
+  <video controls width="320" poster="https://placehold.co/320x180/1e222b/c4b5fd?text=Video+Poster">
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    <track kind="captions" srclang="en" label="English captions">
+    Your browser does not support the video tag.
+  </video>
+
+  <audio controls>
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <p>Responsive art direction with <code>&lt;picture&gt;</code>:</p>
+  <picture>
+    <source media="(min-width:800px)" srcset="https://placehold.co/600x200/1e222b/86efac?text=Wide+Image">
+    <img src="https://placehold.co/300x200/1e222b/86efac?text=Fallback+Image" alt="Responsive picture example">
+  </picture>
+
+  <p>Image map:</p>
+  <img src="https://placehold.co/300x100/1e222b/fca5a5?text=Hover+the+shapes" usemap="#demoMap" alt="Image map demo" width="300" height="100">
+  <map name="demoMap">
+    <area shape="rect" coords="0,0,150,100" href="https://example.com/left" alt="Left region">
+    <area shape="rect" coords="150,0,300,100" href="https://example.com/right" alt="Right region">
+  </map>
+
+  <p>Embedded external content:</p>
+  <iframe src="about:blank" title="Demo iframe" width="100%" height="80" style="border:1px solid var(--line); border-radius:8px;"></iframe>
+</section>
+
+<section id="scripting">
+  <h3>Scripting & canvas</h3>
+  <canvas id="demoCanvas" width="300" height="120"></canvas>
+  <noscript><p>Enable JavaScript to see the canvas drawing above.</p></noscript>
+  <script>
+    const cv = document.getElementById('demoCanvas');
+    if (cv && cv.getContext) {
+      const ctx = cv.getContext('2d');
+      ctx.fillStyle = '#7dd3fc';
+      ctx.fillRect(20, 20, 100, 60);
+      ctx.fillStyle = '#c4b5fd';
+      ctx.beginPath();
+      ctx.arc(220, 60, 40, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#e7e9ee';
+      ctx.font = '14px sans-serif';
+      ctx.fillText('Canvas + <script>', 20, 105);
+    }
+  </script>
+</section>
+
+<section id="templates-web-components">
+  <h3>Templates, slots & custom elements</h3>
+  <template id="rowTemplate">
+    <li class="tpl-row">Templated row — cloned via JS, not rendered until used.</li>
+  </template>
+  <ul id="tplList"></ul>
+  <script>
+    const tpl = document.getElementById('rowTemplate');
+    const list = document.getElementById('tplList');
+    const clone = tpl.content.cloneNode(true);
+    list.appendChild(clone);
+  </script>
+
+  <p>Custom element (Web Component) shell — <code>&lt;fancy-badge&gt;</code>:</p>
+  <fancy-badge>Custom Tag<span class="tag-badge">web component</span></fancy-badge>
+  <script>
+    class FancyBadge extends HTMLElement {
+      connectedCallback(){
+        this.style.display = 'inline-block';
+        this.style.padding = '.4rem .8rem';
+        this.style.border = '1px dashed var(--accent2)';
+        this.style.borderRadius = '8px';
+      }
+    }
+    if (!customElements.get('fancy-badge')) {
+      customElements.define('fancy-badge', FancyBadge);
+    }
+  </script>
+</section>
+
+<section id="dialog-bdi">
+  <h3>Dialog, ruby annotations & bidirectional text</h3>
+  <button onclick="document.getElementById('demoDialog').showModal()">Open dialog</button>
+  <dialog id="demoDialog">
+    <p>This is a native <code>&lt;dialog&gt;</code> modal.</p>
+    <form method="dialog"><button>Close</button></form>
+  </dialog>
+
+  <p>Ruby annotation (e.g. Japanese furigana):
+    <ruby>漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp></ruby>
+  </p>
+
+  <p>Bidirectional text isolation: <bdi>مرحبا</bdi> mixed with English, and forced override: <bdo dir="rtl">This text is reversed visually</bdo>.</p>
+
+  <p>Structured time & data values:
+    <time datetime="2026-07-16">July 16, 2026</time>,
+    <data value="398">Product #398</data>
+  </p>
+</section>
+
+<section id="misc-advanced">
+  <h3>Object embeds & keyboard/sample text</h3>
+  <p>Keyboard input example: press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save. Sample program output: <samp>Compilation successful</samp>. A variable in math notation: <var>x</var> = <var>y</var> + 2.</p>
+  <object data="https://example.com/file.pdf" type="application/pdf" width="100%" height="60">
+    <p>PDF preview unavailable — <a href="https://example.com/file.pdf">download it here</a>.</p>
+  </object>
+  <p>A soft word-break opportunity: Supercalifragilistic<wbr>expialidocious.</p>
+</section>
+
+</main>
+
+<footer style="margin-top:3rem; color:var(--muted); border-top:1px solid var(--line); padding-top:1rem;">
+  <p>End of reference. Deprecated tags (<code>&lt;font&gt;</code>, <code>&lt;center&gt;</code>, <code>&lt;marquee&gt;</code>, <code>&lt;frameset&gt;</code>, etc.) were intentionally omitted since they should not be used in modern HTML.</p>
+</footer>
+
+</body>
+</html>
