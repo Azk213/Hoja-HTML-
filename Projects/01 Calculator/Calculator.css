@@ -1,0 +1,21 @@
+
+
+button{
+    font-size: 25px;
+    border: 0;
+    border-radius: 10;
+    cursor: pointer;
+    background: #444;
+    color: #fff;
+}
+
+button:hover{
+    background: #666;
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 55px;
+    gap: 10px;
+}
