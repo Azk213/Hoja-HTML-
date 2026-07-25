@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="Calculator.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 </head>
+
 <body>
-    <div>
-        <input type = "text">
+    <div class="keys">
+        <input type="text" class="display" Id ="display">
+
         <div class="btn">
-            <button>C</button>
-            <button>÷</button>
-            <button>×</button>
-            <button>←</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>-</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>+</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>=</button>
-            <button>0</button>
+            <button data-value="C" class="operator">C</button>
+            <button data-value="/"class="operator">÷</button>
+            <button data-value="*"class="operator">x</button>
+            <button data-value="|"class="operator">←</button>
+
+            <button data-value="7">7</button>
+            <button data-value="8">8</button>
+            <button data-value="9">9</button>
+            <button data-value="-"class="operator">-</button>
+
+            <button data-value="4">4</button>
+            <button data-value="5">5</button>
+            <button data-value="6">6</button>
+            <button data-value="+"class="operator">+</button>
+
+            <button data-value="1">1</button>
+            <button data-value="2">2</button>
+            <button data-value="3">3</button>
+            <button data-value="=" class="equal">=</button>
+
+            <button data-value="0" class = "zero">0</button>
+            <button data-value=".">.</button>
         </div>
     </div>
-
+    <script src="Calculator.js"></script>
 </body>
+
 </html>
 
