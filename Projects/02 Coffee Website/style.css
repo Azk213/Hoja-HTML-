@@ -18,7 +18,7 @@
     --font-size-s: 0.9rem;
     --font-size-n: 1rem;
     --font-size-m: 1.12rem;
-    --font-size-1: 1.5rem;
+    --font-size-l: 1.5rem;
     --font-size-xl: 2rem;
     --font-size-xxl: 2.3rem;
 
@@ -26,7 +26,6 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-
 
     --border-radius-s: 8px;
     --border-radius-m: 30px;
@@ -40,6 +39,7 @@
     padding: 0 20px;
     max-width: var(--site-max-width);
 }
+
 ul {
     list-style: none;
 }
@@ -62,7 +62,6 @@ header {
     background: var(--primary-colour);
     width: 100%;
     z-index: 5;
-    background:var(--primary-colour);
 }
 
 header .navbar {
@@ -83,10 +82,6 @@ header .navbar {
     gap: 10px;
 }
 
-.nav .nav-menu .nav-link {
-    color: var(--white-colour);
-}
-
 .navbar .nav-menu .nav-link {
     padding: 10px 18px;
     color: var(--white-colour);
@@ -99,6 +94,10 @@ header .navbar {
 .navbar .nav-menu .nav-link:hover {
     color: var(--primary-colour);
     background: var(--secondary-colour);
+}
+
+.navbar :where(#menu-close-button, #menu-open-button) {
+    display: none;
 }
 
 .hero-section {
@@ -114,10 +113,10 @@ header .navbar {
     justify-content: space-between;
 }
 
-.hero-section .hero-details .title{
-    font-size:var(--font-size-xxl);
+.hero-section .hero-details .title {
+    font-size: var(--font-size-xxl);
     color: var(--secondary-colour);
-    font-family: "Miniver" , sans-serif;
+    font-family: "Miniver", sans-serif;
 }
 
 .hero-section .hero-details .subtitle {
@@ -125,5 +124,95 @@ header .navbar {
     max-width: 70%;
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
-    
+}
+
+.hero-section .hero-details .description {
+    max-width: 70%;
+    font-size: var(--font-size-n);
+    margin: 24px 0 40px;
+}
+
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 23px;
+}
+
+.hero-section .hero-details .button {
+    padding: 10px 26px;
+    border: 2px solid transparent;
+    color: var(--primary-colour);
+    border-radius: var(--border-radius-m);
+    background: var(--secondary-colour);
+    font-weight: var(--font-weight-medium);
+    transition: 0.3s ease;
+}
+
+.hero-section .hero-details .button:hover {
+    color: var(--white-colour);
+    border-color: var(--white-colour);
+    background: transparent;
+}
+
+.hero-section .hero-details .contact-us {
+    color: var(--white-colour);
+    border-color: var(--white-colour);
+    background: transparent;
+}
+
+.hero-section .hero-details .contact-us:hover {
+    color: var(--primary-colour);
+    border-color: var(--secondary-colour);
+    background: var(--secondary-colour);
+}
+
+.hero-section .hero-image-wrapper {
+    max-width: 500px;
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 900px){
+    :root{
+    --font-size-m: 1rem;
+    --font-size-l: 1.3rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 1.8rem
+    }
+
+    .navbar :where(#menu-close-button,#menu-open-button) {
+        font-size: var(--font-size-l);
+        display: block;
+
+
+    }
+
+    .navbar #menu-close-button{
+        position:absolute;
+        right: 30px;
+        top:30px;
+
+    }
+
+    .nav #menu-open-button{
+        color: var(--white-colour);
+    }
+    .navbar .nav-menu{
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--white-colour);
+    }
+
+    .navbar .nav-menu .nav-link{
+        color: var(--dark-colour);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-l);
+    }
 }
