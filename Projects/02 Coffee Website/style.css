@@ -207,8 +207,12 @@ header .navbar {
         align-items: center;
         padding-top: 100px;
         background: var(--white-colour);
+        transition: left 0,2s ease;
     }
+    body.show-mobile-menu .navbar .nav-menu{
+        left:0;
 
+    }
     .navbar .nav-menu .nav-link{
         color: var(--dark-colour);
         display: block;
