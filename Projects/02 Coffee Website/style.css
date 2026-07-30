@@ -170,33 +170,30 @@ header .navbar {
     margin-right: 30px;
 }
 
-@media screen and (max-width: 900px){
-    :root{
-    --font-size-m: 1rem;
-    --font-size-l: 1.3rem;
-    --font-size-xl: 1.5rem;
-    --font-size-xxl: 1.8rem
+@media screen and (max-width: 900px) {
+    :root {
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
     }
 
-    .navbar :where(#menu-close-button,#menu-open-button) {
+    .navbar :where(#menu-close-button, #menu-open-button) {
         font-size: var(--font-size-l);
         display: block;
-
-
     }
 
-    .navbar #menu-close-button{
-        position:absolute;
+    .navbar #menu-close-button {
+        position: absolute;
         right: 30px;
-        top:30px;
-
+        top: 30px;
     }
 
-    .nav #menu-open-button{
+    .navbar #menu-open-button {
         color: var(--white-colour);
     }
-    .navbar .nav-menu{
-        display: block;
+
+    .navbar .nav-menu {
         position: fixed;
         left: -300px;
         top: 0;
@@ -207,13 +204,14 @@ header .navbar {
         align-items: center;
         padding-top: 100px;
         background: var(--white-colour);
-        transition: left 0,2s ease;
+        transition: left 0.2s ease;
     }
-    body.show-mobile-menu .navbar .nav-menu{
-        left:0;
 
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
     }
-    .navbar .nav-menu .nav-link{
+
+    .navbar .nav-menu .nav-link {
         color: var(--dark-colour);
         display: block;
         margin-top: 17px;
