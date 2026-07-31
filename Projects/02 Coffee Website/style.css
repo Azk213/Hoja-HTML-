@@ -40,6 +40,24 @@
     max-width: var(--site-max-width);
 }
 
+.section-title{
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+}
+
+.section-title::after{
+    content: " ";
+    width: 80px;
+    height: 5px;
+    display:block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-colour);
+}
+
+
 ul {
     list-style: none;
 }
@@ -61,6 +79,8 @@ img {
 header {
     background: var(--primary-colour);
     width: 100%;
+    position: sticky;
+    top: 0;
     z-index: 5;
 }
 
@@ -170,6 +190,57 @@ header .navbar {
     margin-right: 30px;
 }
 
+.about-section {
+    padding: 120px 0;
+    background: var(--light-pink-colour);
+}
+
+.about-section .section-content{
+    display:flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+
+.about-section .about details .text{
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: var(--font-size-m);
+}
+
+.about-section .about-details .text {
+    padding: 0;
+}
+
+.about-section .social-link-list{
+    display: flex;
+    gap :25px;
+    justify-content: center;
+}
+
+.about-section .social-link-list .social-link {
+    color: var(--primary-colour);
+    font-size: var(--font-size-l);
+}
+
+.about-section .social-link-list .social-link:hover {
+    color: var(--secondary-colour);
+    font-size:var(--font-size-l) ;
+    transition: 0.2s ease;   
+}
+
+.about-section .about-details{
+    max-width: 50%;
+}
+
 @media screen and (max-width: 900px) {
     :root {
         --font-size-m: 1rem;
@@ -178,6 +249,16 @@ header .navbar {
         --font-size-xxl: 1.8rem;
     }
 
+    body.show-mobile-menu header::before{
+        content:" ";
+        position:fixed;
+        left: 0;
+        top:0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0,0,0,0.2);  
+    }
     .navbar :where(#menu-close-button, #menu-open-button) {
         font-size: var(--font-size-l);
         display: block;
@@ -216,5 +297,27 @@ header .navbar {
         display: block;
         margin-top: 17px;
         font-size: var(--font-size-l);
+    }
+
+    .hero-section .section-content {
+        flex-direction:column-reverse;
+        gap: 50px;
+        justify-content: center;
+        text-align: center;
+        padding: 30px 20px 20px;
+
+    }
+
+    .hero-section .hero-image-wrapper{
+        max-width: 270px;
+        margin-right: 0;
+    }
+
+    .hero-section .hero-details :is(.subtitle,.description) {
+        max-width: 100%;
+    }
+    
+    .hero-section .hero-details .buttons{
+        justify-content: center;
     }
 }
