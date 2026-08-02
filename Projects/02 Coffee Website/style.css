@@ -34,6 +34,10 @@
     --site-max-width: 1300px;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
 .section-content {
     max-width: var(--site-max-width);
     margin: 0 auto;
@@ -549,6 +553,6 @@ header .navbar {
     .footer-section .section-content {
         flex-direction: column;
         gap: 20px;
-        
+
     }
 }
