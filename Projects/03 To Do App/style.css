@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.main {
+    width: 430px;
+    background: #222;
+    padding: 30px;
+    color: white;
+    border-radius: 15px;
+    transition: 0.4s ease;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    background: #181818;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    width: 430px;
+}
+
+.input-section {
+    display: flex;
+    gap: 12px;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 13px;
+    border-radius: 9px;
+    border: none;
+    background: #111;
+    color: white;
+    box-sizing: border-box;
+}
+
+.input-section button {
+    padding: 12px 17px;
+    background-color: limegreen;
+    color: black;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    font-family: "Poppins", sans-serif;
+    background: #252525;
+    list-style: none;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+li {
+    background: #2d2d2d;
+    margin: 12px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.span-count {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.button-clear {
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    width: 150px;
+    height: 40px;
+    color: white;
+    background: #e53935;
+    cursor: pointer;
+}
+
+li.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.task-buttons button {
+    cursor: pointer;
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-toggle button {
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+body.light {
+    background: #f3f1ec;
+}
+
+body.light .main {
+    background: #fff;
+    color: #222;
+}
+
+body.light ul {
+    background: #f5f5f5;
+    color: #222;
+}
+
+body.light li {
+    background: #e8e8e8;
+}
+
+body.light .input-section input {
+    background: #e8e8e8;
+    color: #222;
+}
+
+body.light .theme-toggle button {
+    background: #3f3e3e;
+    color: #222;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="dark">
+    <div class="theme-toggle">
+         <button onclick="toggleTheme()">🌙 / 🔆</button>
+    </div>
+    <div class="main">
+        <h2>My To-Do App</h2>
+
+        <div class="input-section">
+            <input type="text" placeholder="Add New Task" id="taskInput">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <ul id="taskList">
+            <li>Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+        </ul>
+
+        <span id = "taskCount" class="span-count">3 Tasks</span>
+        <button class="button-clear" onclick="clearCompleted()">Clear Completed</button>
+    </div>
+</body>
+
+</html>
