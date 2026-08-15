@@ -3,7 +3,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.login-container {
+.login-container , .forgot-password{
     background: #222;
     width: 360px;
     padding: 30px;
@@ -11,7 +11,7 @@
     color: #fff;
 }
 
-h2{
+h2 ,h3{
     text-align: center;
 }
 
@@ -29,15 +29,76 @@ input{
 }
 
 .password-box {
-    display: flex;
     align-items: center;
 }
 
 .password-box span{
-    margin-left: 30px;
+    margin-left: -30px;
     cursor: pointer;
 }
 
 button{
     width: 100%;
+    padding: 12px;
+    background: #28a745;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
 }
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    margin-top: 15px
+}
+.links a {
+    color: #D4B978;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.error{
+    color: red;
+    font-size: 12px;
+
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.OTP-box{
+    margin-top: 20px;
+}
+
+.hidden {
+    display:none;
+}
+
+.OTP-box button{
+    margin-top: 10px;
+}
+
+.btn-lightmode {
+    width: fit-content;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    align-items: center;
+}
+
+.dark {
+    background: #181818;
+}
+
+.light {
+    background: rgb(221, 219, 219);
+}
+
