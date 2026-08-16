@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium attendance management system">
+    <title>Attendly — Attendance Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <div class="brand">
+                <div class="brand-logo">A</div>
+
+                <div>
+                    <h1>Attendly</h1>
+                    <p>Attendance Management</p>
+                </div>
+            </div>
+
+            <div class="topbar-actions">
+                <div class="today-label">
+                    <span>Today</span>
+                    <strong id="todayDisplay">—</strong>
+                </div>
+
+                <button
+                    class="theme-button"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Toggle theme"
+                >
+                    ☀
+                </button>
+            </div>
+
+        </header>
+
+
+        <!-- MAIN -->
+        <main class="main-content">
+
+            <!-- LEFT -->
+            <section class="attendance-panel">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">DAILY REGISTER</span>
+                        <h2>Mark Attendance</h2>
+                        <p>Select a date and record attendance for your students.</p>
+                    </div>
+
+                    <div class="date-picker">
+
+                        <label for="attendanceDate">
+                            Attendance Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="attendanceDate"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATS -->
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <div class="stat-icon blue">👥</div>
+
+                        <div>
+                            <span>Total Students</span>
+                            <strong id="totalStudents">0</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">✓</div>
+
+                        <div>
+                            <span>Present</span>
+                            <strong id="presentCount">0</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon red">×</div>
+
+                        <div>
+                            <span>Absent</span>
+                            <strong id="absentCount">0</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon purple">%</div>
+
+                        <div>
+                            <span>Attendance</span>
+                            <strong id="attendancePercentage">0%</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- TOOLBAR -->
+                <div class="attendance-toolbar">
+
+                    <div class="search-box">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="search"
+                            id="searchStudents"
+                            placeholder="Search students..."
+                        >
+
+                    </div>
+
+                    <div class="toolbar-buttons">
+
+                        <button
+                            type="button"
+                            class="btn btn-present"
+                            id="markAllPresent"
+                        >
+                            ✓ Mark All Present
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-absent"
+                            id="markAllAbsent"
+                        >
+                            × Mark All Absent
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STUDENT LIST -->
+                <div class="list-header">
+
+                    <span>STUDENT</span>
+                    <span>ATTENDANCE</span>
+
+                </div>
+
+                <div
+                    class="student-list"
+                    id="studentList"
+                ></div>
+
+
+                <div class="bottom-actions">
+
+                    <button
+                        type="button"
+                        class="save-button"
+                        id="saveAttendance"
+                    >
+                        Save Attendance
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT REPORT -->
+            <aside class="report-panel">
+
+                <div class="report-header">
+
+                    <div>
+                        <span class="eyebrow">ATTENDANCE REPORT</span>
+
+                        <h2>Daily Report</h2>
+
+                        <p id="reportDate">
+                            —
+                        </p>
+                    </div>
+
+                    <div class="report-circle">
+                        <span id="reportPercentage">0%</span>
+                    </div>
+
+                </div>
+
+
+                <!-- SUMMARY -->
+                <div class="report-summary">
+
+                    <div>
+                        <span>Present</span>
+                        <strong
+                            id="reportPresent"
+                        >
+                            0
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Absent</span>
+                        <strong
+                            id="reportAbsent"
+                        >
+                            0
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <!-- REPORT LIST -->
+                <div class="report-list-header">
+
+                    <span>STUDENT</span>
+                    <span>STATUS</span>
+
+                </div>
+
+                <div
+                    class="attendance-report"
+                    id="attendanceReport"
+                ></div>
+
+
+                <!-- LEGEND -->
+                <div class="legend">
+
+                    <div>
+                        <span class="legend-dot present"></span>
+                        Present
+                    </div>
+
+                    <div>
+                        <span class="legend-dot absent"></span>
+                        Absent
+                    </div>
+
+                    <div>
+                        <span class="legend-dot unmarked"></span>
+                        Not Marked
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </main>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div
+        class="toast-container"
+        id="toastContainer"
+        aria-live="polite"
+    ></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
