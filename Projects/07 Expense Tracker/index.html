@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page">
+    <article class="device" aria-label="Expense Tracker Device">
+
+      <header class="device-header">
+        <div class="device-header__brand">
+          <h1 class="device-title">Expense Tracker</h1>
+          <p class="device-subtitle">Personal Finance</p>
+        </div>
+        <button
+          type="button"
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle dark and light mode"
+        >
+          <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+        </button>
+      </header>
+
+      <section class="balance-section" aria-labelledby="balance-label">
+        <p id="balance-label" class="balance-label">CURRENT BALANCE</p>
+        <p id="balance" class="balance-value">$0.00</p>
+      </section>
+
+      <section class="summary-section" aria-label="Income and expense summary">
+        <div class="summary-card summary-card--income">
+          <p class="summary-label">Income</p>
+          <p id="income" class="summary-value">$0.00</p>
+        </div>
+        <div class="summary-card summary-card--expense">
+          <p class="summary-label">Expense</p>
+          <p id="expense" class="summary-value">$0.00</p>
+        </div>
+      </section>
+
+      <section class="form-section" aria-labelledby="form-heading">
+        <h2 id="form-heading" class="section-title">Add Transaction</h2>
+        <form id="transaction-form" class="transaction-form" novalidate>
+
+          <div class="form-field">
+            <label for="title" class="form-label">Title</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              class="form-input"
+              placeholder="What was this money for?"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="amount" class="form-label">Amount</label>
+            <input
+              type="number"
+              id="amount"
+              name="amount"
+              class="form-input"
+              placeholder="0.00"
+              min="0"
+              step="0.01"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="category" class="form-label">Category</label>
+            <select id="category" name="category" class="form-select" required>
+              <option value="Food">Food</option>
+              <option value="Transport">Transport</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Salary">Salary</option>
+              <option value="Rent">Rent</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="type" class="form-label">Type</label>
+            <select id="type" name="type" class="form-select" required>
+              <option value="Income">Income</option>
+              <option value="Expense">Expense</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="date" class="form-label">Date</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              class="form-input"
+              required
+            >
+          </div>
+
+          <button type="submit" id="add-btn" class="add-btn">+ ADD TRANSACTION</button>
+
+        </form>
+      </section>
+
+      <section class="history-section" aria-labelledby="history-heading">
+        <h2 id="history-heading" class="section-title">TRANSACTIONS</h2>
+
+        <div class="filter-bar" role="group" aria-label="Filter transactions">
+          <button
+            type="button"
+            id="filter-all"
+            class="filter-btn filter-btn--active"
+            data-filter="all"
+          >
+            All
+          </button>
+          <button
+            type="button"
+            id="filter-income"
+            class="filter-btn"
+            data-filter="income"
+          >
+            Income
+          </button>
+          <button
+            type="button"
+            id="filter-expense"
+            class="filter-btn"
+            data-filter="expense"
+          >
+            Expense
+          </button>
+        </div>
+
+        <div id="empty-state" class="empty-state">
+          <p class="empty-state__title">NO TRANSACTIONS</p>
+          <p class="empty-state__message">Your financial activity will appear here.</p>
+        </div>
+
+        <ul id="transaction-list" class="transaction-list" aria-live="polite"></ul>
+
+      </section>
+
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

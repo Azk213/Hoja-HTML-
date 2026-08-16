@@ -6,7 +6,7 @@
 body{
     height: 100vh;
     margin: 0;
-    background: linear-gradient(35DEG, #667eea, #764ba2);
+    background: linear-gradient(135deg, #667eea, #764ba2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,4 +62,22 @@ button:hover{
 
 .hidden {
     display: none;
+}
+
+.option {
+    background: linear-gradient(135deg,#e0eafc,#cfdef3);
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    cursor:pointer;
+    transition: 0.3s ease;
+}
+
+.option.correct {
+    background: linear-gradient(135deg , #56ab2f, #a8e063);
+    color:white;
+}
+
+.option.wrong{
+    background: linear-gradient(135deg,#ff416c,#ff4b2b);
 }
