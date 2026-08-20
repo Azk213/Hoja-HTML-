@@ -30,6 +30,7 @@ function renderTasks() {
 
     tasks.forEach((task, index) => {
         const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between align-items center"
 
         if (task.completed) {
             li.classList.add("completed");
@@ -39,8 +40,8 @@ function renderTasks() {
         <span onclick="toggleTask(${index})">${task.text}</span>
 
         <div class="task-buttons">
-            <button onclick="editTask(${index})">✒️</button>
-            <button onclick="deleteTask(${index})">🗑️</button>
+            <button class="btn btn-sm btn-outline-primary" onclick="editTask(${index})">✒️</button>
+            <button class="btn btn-sm btn-outline-danger" onclick="deleteTask(${index})">🗑️</button>
         </div>`;
 
         taskList.appendChild(li);

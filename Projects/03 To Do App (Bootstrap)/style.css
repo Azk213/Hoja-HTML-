@@ -1,0 +1,23 @@
+.main{
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 25px;
+}
+.dark .main {
+    background-color: #222;
+    color: #fff;
+}
+
+.light .main{
+    background-color: #fff;
+    color: #222;
+}
+
+body.light{
+    background-color: #f2f2f2;
+    color: #000;
+}
+li.completed span{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
