@@ -26,7 +26,7 @@ function togglePassword(){
 }
 
 function showOTP(){
-    document.getElementById("otpbox").classList.remove("hidden");
+    document.getElementById("otpbox").classList.remove("d-none");
 }
 
 function verifyOTP() {
@@ -41,6 +41,6 @@ function verifyOTP() {
 }
 
 function toggleMode(){
-    document.body.classList.toggle("dark");
-    document.body.classList.toggle("light")
+    document.body.classList.toggle("bg-dark");
+    document.body.classList.toggle("bg-light")
 }
