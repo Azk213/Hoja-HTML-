@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,12 +31,7 @@
                     <strong id="todayDisplay">—</strong>
                 </div>
 
-                <button
-                    class="theme-button"
-                    id="themeToggle"
-                    type="button"
-                    aria-label="Toggle theme"
-                >
+                <button class="theme-button" id="themeToggle" type="button" aria-label="Toggle theme">
                     ☀
                 </button>
             </div>
@@ -63,10 +59,7 @@
                             Attendance Date
                         </label>
 
-                        <input
-                            type="date"
-                            id="attendanceDate"
-                        >
+                        <input type="date" id="attendanceDate">
 
                     </div>
 
@@ -122,29 +115,17 @@
 
                         <span>⌕</span>
 
-                        <input
-                            type="search"
-                            id="searchStudents"
-                            placeholder="Search students..."
-                        >
+                        <input type="search" id="searchStudents" placeholder="Search students...">
 
                     </div>
 
                     <div class="toolbar-buttons">
 
-                        <button
-                            type="button"
-                            class="btn btn-present"
-                            id="markAllPresent"
-                        >
+                        <button type="button" class="btn btn-present" id="markAllPresent">
                             ✓ Mark All Present
                         </button>
 
-                        <button
-                            type="button"
-                            class="btn btn-absent"
-                            id="markAllAbsent"
-                        >
+                        <button type="button" class="btn btn-absent" id="markAllAbsent">
                             × Mark All Absent
                         </button>
 
@@ -161,19 +142,12 @@
 
                 </div>
 
-                <div
-                    class="student-list"
-                    id="studentList"
-                ></div>
+                <div class="student-list" id="studentList"></div>
 
 
                 <div class="bottom-actions">
 
-                    <button
-                        type="button"
-                        class="save-button"
-                        id="saveAttendance"
-                    >
+                    <button type="button" class="save-button" id="saveAttendance">
                         Save Attendance
                     </button>
 
@@ -209,18 +183,14 @@
 
                     <div>
                         <span>Present</span>
-                        <strong
-                            id="reportPresent"
-                        >
+                        <strong id="reportPresent">
                             0
                         </strong>
                     </div>
 
                     <div>
                         <span>Absent</span>
-                        <strong
-                            id="reportAbsent"
-                        >
+                        <strong id="reportAbsent">
                             0
                         </strong>
                     </div>
@@ -236,10 +206,7 @@
 
                 </div>
 
-                <div
-                    class="attendance-report"
-                    id="attendanceReport"
-                ></div>
+                <div class="attendance-report" id="attendanceReport"></div>
 
 
                 <!-- LEGEND -->
@@ -270,14 +237,11 @@
 
 
     <!-- TOAST -->
-    <div
-        class="toast-container"
-        id="toastContainer"
-        aria-live="polite"
-    ></div>
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
